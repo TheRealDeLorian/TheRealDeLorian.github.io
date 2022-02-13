@@ -4,17 +4,11 @@
 
 Hello World!
 ============
-
-> Blockquote blockquote woo hooo!
->
-> More paragraphs! We love those!
+Welcome to my web site
 
 * item 1
 * item 2
 * item 3
 
-    
-</body>
-</html>
 
 
