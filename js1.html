@@ -2,32 +2,43 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>js test</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js test</title>
 </head>
 
 <body>
-    <script>
-        let secret = "abfc";
-            // let guess = prompt("Please guess a phrase.");
-        
-
-
-        console.log("the first letter of your guess is " + guess[0]);
-        console.log(secret === guess);
-        console.log(secret !== guess);
-        console.log(5 === "5");
-
-        let i = 0;
-        while (i < secret.Length) {
-            console.log(secret[i]);
-            i++;
+  <script>
+    // TODO: generate a length n secret randomly with no repeats and only
+    // using the first m letter of the alphabet
+    let secret = "abfc";
+    let guess = "";
+    do {
+      guess = prompt("Please enter your guess.");
+      // (optional) validate the guess to make sure it doesn't have duplicates
+      
+      let exactMatches = 0;
+      for (let i = 0; i < secret.length; i++) {
+        if (secret[i] === guess[i]) exactMatches++;
+      }
+      let letterMatches = 0;
+      for (let guessLetter of guess) {
+        for (let secretLetter of secret) {
+          if (guessLetter === secretLetter) letterMatches++;
         }
-    </script>
+      }
+      let offCounts = exactMatches - letterMatches;
+      alert(
+        `You have ${exactMatches} correct letters in the correct positions
+         and ${offCounts} correct letters in the wrong positions.
+        `
+      );
+    } while (guess !== secret);
+    alert("You got it!");
+  </script>
 
-    <h1>Hello world!</h1>
+  <h1>Hello world!</h1>
 
 </body>
 
