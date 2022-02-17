@@ -10,13 +10,15 @@
 
 <body>
     <script>
-        function getRandomArbitrary(min, max) {
-            return Math.random() * (max - min) + min;
-        }
-        stickPile = getRandomArbitrary(10, 30);
+        stickPile = 20;
         alert(`Welcome to sticks! There will be ${stickPile} sticks.`);
         let playerTurn = "1"
-        let sticksTaken = prompt(`Player ${playerTurn}, select how many sticks you wanna take.`);
+        function takeSticks() 
+        {
+            prompt(`Player ${playerTurn}, select how many sticks you wanna take.`);  
+        };
+        let sticksTaken = takeSticks()
+        
         stickPile -= sticksTaken;
 
     </script>
