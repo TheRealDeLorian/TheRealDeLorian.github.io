@@ -1,3 +1,7 @@
+<!-- Dorian Cottle
+    CS 1810
+    2/19/2022 -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,17 +14,45 @@
 
 <body>
     <script>
-        stickPile = 20;
-        alert(`Welcome to sticks! There will be ${stickPile} sticks.`);
-        let playerTurn = "1"
-        function takeSticks() 
-        {
-            prompt(`Player ${playerTurn}, select how many sticks you wanna take.`);  
-        };
-        let sticksTaken = takeSticks()
-        
-        stickPile -= sticksTaken;
+        while (true) {
+            stickPile = 20;
+            alert(`Welcome to sticks! There will be ${stickPile} sticks. Take 1-3 sticks each turn, and whoever takes the last stick LOSES!`);
+            let playerTurn = true
+            let maxSticks = 3;
+            for (let i = 0; i < stickPile + 1;) {
+                if (playerTurn == true) {
+                    player = "player 1";
+                }
+                else {
+                    player = "player 2";
+                }
 
+                if (stickPile == 0) {
+                    alert(`${player} is the winner!`)
+                    break;
+                }
+
+                sticksTaken = parseInt(prompt(`There are ${stickPile} sticks left. ${player}, how many sticks do you want to take?`));
+
+                if (sticksTaken > maxSticks) {
+                    alert(`You may only take up to ${maxSticks} whole sticks.`)
+                }
+                else if (sticksTaken == 1 || sticksTaken == 2 || sticksTaken == 3) {
+                    stickPile -= sticksTaken
+                    playerTurn = !playerTurn;
+                }
+                else {
+                    alert(`You may only take up to ${maxSticks} whole sticks.`)
+                }
+
+                if (stickPile < maxSticks) {
+                    maxSticks = stickPile;
+                }
+
+
+            }
+            alert(`Let's play again!`);
+        }
     </script>
 </body>
 
