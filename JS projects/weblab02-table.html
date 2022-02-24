@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+        #addNew {
+            background-color: bisque;
+        }
+
+        table,
+        td,
+        tr {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="message">Complete JavaScript Course</div>
+    <div>
+        <input type="text" id="addFriend">
+        <input type="button" id="addNew" value="Add Friend">
+    </div>
+    <table id="output"></table>
+    <script>
+        const myArray = ["Dorian", "Juli", "Gregory"]
+        // for (item of myArray) {
+        //     console.log(item.name)
+        // }
+        let name = document.querySelector("#addFriend").value
+        document.querySelector("#addNew").addEventListener("click", addFriend());
+            console.log(`${myArray[myArray.Length - 1]}`)
+        function addFriend() {
+            myArray.push("#addFriend");
+            let parent = document.querySelector("#nameTable")
+            let child = document.createElement("tr");
+            child.innerHTML = `<td>${myArray[myArray.length - 1]}</td>`
+            parent.appendChild(child);
+        }
+    </script>
+
+    <table id="nameTable">
+        <tr><td>Names:</td><td>Votes:</td></tr>
+        <tr>
+            <td>Dorian</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Juli</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Gregory</td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+
+</html>
