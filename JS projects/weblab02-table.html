@@ -45,18 +45,19 @@
             myArray.forEach(makeTable)
         }
         function makeTable(element, index = myArray.length - 1) {
-            if (element.length > 1) {
                 let child = document.createElement("tr");
                 child.innerHTML = `<td>${index + 1}.</td><td>${element}</td><td id="points ${index + 1}">${points}</td>`
                 parent.appendChild(child);
                 document.querySelector("#addFriend").value = '';
-            }
+            index = -1;
         }
 
 
         button.addEventListener('click', () => {
-            myArray.push(textInput.value);
-            makeTable(myArray[myArray.length - 1])
+            if (textInput.value.length > 1) {
+                myArray.push(textInput.value);
+                makeTable(myArray[myArray.length - 1])
+            }
         });
 
 
