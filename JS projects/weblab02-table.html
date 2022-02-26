@@ -37,13 +37,13 @@
         let parent = document.querySelector("#output")
 
         const myArray = ["Dorian", "Juli", "Gregory"];
-        myArray.forEach(makeTable);
-        // buildContent();
+        // myArray.forEach(makeTable);
+        buildContent();
 
-        // function buildContent() {
-        //     parent.value = "";
-        //     myArray.forEach(makeTable)
-        // }
+        function buildContent() {
+            parent.value = "";
+            myArray.forEach(makeTable)
+        }
         function makeTable(element, index = myArray.length - 1) {
             if (element.length > 1) {
                 let child = document.createElement("tr");
