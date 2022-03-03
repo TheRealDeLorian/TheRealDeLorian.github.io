@@ -36,8 +36,8 @@
         let points = 0;
         let textInput = document.querySelector("#addFriend");
         let button = document.querySelector("#addNew");
-        let parent = document.querySelector("#output")
-        let allPoints = document.querySelectorAll("#points")
+        let parent = document.querySelector("#output");
+        let allPoints = document.querySelector("#points");
 
         // myArray.forEach(makeTable);
         buildContent();
@@ -50,8 +50,9 @@
             let child = document.createElement("tr");
             child.innerHTML = `<td>${index + 1}.</td><td>${element}</td><td id="points">${points}</td>`
             parent.appendChild(child);
-            document.querySelector("#addFriend").value = '';
-            index = -1;
+
+            // document.querySelector("#addFriend").value = '';
+            // index = -1;
         }
 
 
@@ -64,11 +65,10 @@
 
 
 
-        // allPoints.item(1).addEventListener("click", () => {
-
-        //     points += 1;
-
-        // });
+        document.querySelector(child).addEventListener("click", () => {
+            points += 1;
+            buildContent;
+        });
 
 
     </script>
