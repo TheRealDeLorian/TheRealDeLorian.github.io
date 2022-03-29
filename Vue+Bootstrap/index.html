@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>stuff</title>
+</head>
+
+<body>
+    <main>
+    <div id="app" class="card col-4" style="width: 18rem;">
+        <img src="download.jfif" class="card-img-top" alt="ruler teaching math">
+        <div class="card-body">
+          <h1 class="card-title">Solve:</h1>
+          <p class="card-text">{{ mathprob }}</p>
+        </div>
+      </div>
+    <div id="app">
+        {{ problem }}
+        <br />
+        <input type = "text" v-model="input" />
+        <br />
+        <button @click="submit">check</button>
+        <br />
+        {{ status }}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="app.js"></script>
+</main>
+</body>
+
+</html>

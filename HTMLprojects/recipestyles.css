@@ -1,0 +1,30 @@
+body{
+    background-color: aquamarine;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:brown;
+    
+}
+
+header {
+    text-align: center;
+    border: dashed purple;
+    border-radius: 20px;
+}
+
+h1{
+    padding: 40px;
+}
+
+table, th, td{ 
+    border: 1px solid gray; 
+    background: linear-gradient(to bottom, #e2e2e2 0%, #dbdbdb 50%,   #d1d1d1 51%, #fefefe 100%);
+}
+
+img{
+    margin: 60px; 
+}
+
+
+
+    
+    
