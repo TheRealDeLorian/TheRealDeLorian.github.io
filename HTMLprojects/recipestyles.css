@@ -20,8 +20,11 @@ table, th, td{
     background: linear-gradient(to bottom, #e2e2e2 0%, #dbdbdb 50%,   #d1d1d1 51%, #fefefe 100%);
 }
 
-img{
-    margin: 60px; 
+@media screen and (min-width: 700px) {
+    img{
+        margin: 60px; 
+        border-image-width: 20;
+    }
 }
 
 
