@@ -1,5 +1,61 @@
+body{
+    padding: 5%;
+    background-color: aquamarine;
+    color:brown;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+img { 
+    max-width: 90%;
+    padding: 5%
+}
+@media screen and (min-width: 650px) {
+    body {
+        font-family: fantasy;
+    }
+    #intro {
+        text-align: center;
+    }
+    table {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #directions {
+        margin-left: 25%;
+        margin-right: auto;
+    }
+
+}
+@media screen and (min-width: 1361px) {
+    main{
+        padding: 40px;
+    }
+    img { 
+        float: right;
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+    body{ 
+        font-size: x-large;
+    }
+    #directions {
+        padding-top: 100px;
+        margin-left: 15%
+    }
+}
+
+header {
+    text-align: center;
+    border: dashed purple;
+    border-radius: 20px;
+}
+
 table, th, td{ 
     border: 1px solid gray; 
-    background: linear-gradient(to bottom, #e2e2e2 0%, #dbdbdb 50%,   #d1d1d1 51%, #fefefe 100%);
+    /* background: linear-gradient(to bottom, #e2e2e2 0%, #dbdbdb 50%,   #d1d1d1 51%, #fefefe 100%); */
 }
+
+/* min width 125 */
+
+
+
 
