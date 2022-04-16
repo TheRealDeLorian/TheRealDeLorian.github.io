@@ -1,47 +1,96 @@
-body{
+body {
     padding: 5%;
     background-color: aquamarine;
-    color:brown;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    color: brown;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
-img { 
+
+img {
     max-width: 90%;
     padding: 5%
 }
+
 @media screen and (min-width: 650px) {
     body {
         font-family: fantasy;
     }
+
     #intro {
         text-align: center;
     }
+
     table {
         margin-left: auto;
         margin-right: auto;
     }
-    #directions {
+
+    #ingredientsanddirections {
         margin-left: 25%;
         margin-right: auto;
     }
 
 }
+
 @media screen and (min-width: 1361px) {
-    main{
+    main {
         padding: 40px;
     }
-    img { 
+
+    #title {
+        padding: 20px;
+        font-size: xxx-large;
+    }
+
+    img {
+        max-width: 40%;
         float: right;
         padding-right: 50px;
         padding-left: 50px;
     }
-    body{ 
+
+    body {
+        padding: 0px;
         font-size: x-large;
     }
-    #directions {
+
+    #ingredientsanddirections {
         padding-top: 100px;
         margin-left: 15%
     }
+
+    header {
+        max-height: 5%;
+    }
+
+    .gridcontainer {
+        margin: 10%;
+        display: grid;
+        column-gap: 100px;
+        row-gap: 1px;
+        align-items: center;
+        justify-content: center;
+      }
+      .grid-item1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        font-size:xxx-large;
+      }
+      .grid-item2 {
+        grid-row-start: 2;
+        
+      }
+      .grid-item3 {
+        
+      }
+      .grid-item4 {
+          grid-column-start: 2;
+          grid-column-end: 4;
+          grid-row-start: 2;
+          grid-row-end: 3;
+        
+      }
 }
+
 
 header {
     text-align: center;
@@ -49,13 +98,11 @@ header {
     border-radius: 20px;
 }
 
-table, th, td{ 
-    border: 1px solid gray; 
+table,
+th,
+td {
+    border: 1px solid gray;
     /* background: linear-gradient(to bottom, #e2e2e2 0%, #dbdbdb 50%,   #d1d1d1 51%, #fefefe 100%); */
 }
 
 /* min width 125 */
-
-
-
-

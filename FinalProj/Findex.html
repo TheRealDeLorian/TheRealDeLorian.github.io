@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,12 +20,15 @@
     </header>
 
     <main>
-        <h3>How to make the most delicious cookies ever</h3>
-        <div id="directions">
-            <h3>Ingredients</h3>
-            <caption>Servings: <input type = "text" v-model="input" size="1px"/></caption>
-            <button id="">Calculate servings!</button>
-            <table id="ingredientsTable">
+        <img src="cookies.jpg" alt="Image of Dorian giving a thumbs up">
+        <h3 id="title">How to make the most delicious cookies ever</h3>
+        <div id="ingredientsanddirections" class="gridcontainer">
+            <h3 class="grid-item1">Ingredients</h3>
+            <div class="grid-item2">
+                <caption>Servings: <input type="text" v-model="input" size="1px" /></caption>
+                <button>Calculate servings!</button>
+            </div>
+            <table id="ingredientsTable" class="grid-item4">
                 <thead>
                     <tr>
                         <th>Amount</th>
