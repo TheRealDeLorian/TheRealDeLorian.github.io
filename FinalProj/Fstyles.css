@@ -31,7 +31,7 @@ img {
 
 }
 
-@media screen and (min-width: 1361px) {
+/* @media screen and (min-width: 1361px) { */
     main {
         padding: 40px;
     }
@@ -63,33 +63,27 @@ img {
     }
 
     .gridcontainer {
-        margin: 10%;
+        margin: 1%;
         display: grid;
-        column-gap: 100px;
+        grid-template-areas: "ingredients table"
+                             "servings    table"
+                             ".           table";
         row-gap: 1px;
         align-items: center;
         justify-content: center;
       }
       .grid-item1 {
-        grid-column-start: 1;
-        grid-column-end: 3;
+          margin: 0px;
+        grid-area: ingredients;
         font-size:xxx-large;
       }
       .grid-item2 {
-        grid-row-start: 2;
-        
+          grid-area: servings;
       }
       .grid-item3 {
-        
+        grid-area: table;
       }
-      .grid-item4 {
-          grid-column-start: 2;
-          grid-column-end: 4;
-          grid-row-start: 2;
-          grid-row-end: 3;
-        
-      }
-}
+/* } */
 
 
 header {
