@@ -67,7 +67,8 @@ img {
         display: grid;
         grid-template-areas: "ingredients table"
                              "servings    table"
-                             ".           table";
+                             ".           table"
+                             "directions  directions";
         row-gap: 1px;
         align-items: center;
         justify-content: center;
@@ -82,6 +83,9 @@ img {
       }
       .grid-item3 {
         grid-area: table;
+      }
+      #directionsonly {
+          grid-area: directions;
       }
 /* } */
 
