@@ -92,17 +92,22 @@
 
             document.getElementById("calculatebutton").addEventListener("click", ChangeServings);
             function ChangeServings() {
-                ResetAmts();
-                myApp.brownsugaramt *= servingsInput.value;
-                myApp.butteramt *= servingsInput.value;
-                myApp.eggamt *= servingsInput.value;
-                myApp.saltamt *= servingsInput.value;
-                myApp.bakingsodaamt *= servingsInput.value;
-                myApp.vanillaamt *= servingsInput.value;
-                myApp.flouramt *= servingsInput.value;
-                myApp.chocolatechipsamt *= servingsInput.value;
+                if (servingsInput.value == 0 || servingsInput.value == "") {
+                    ResetAmts();
+                }
+                else {
+                    ResetAmts();
+                    myApp.brownsugaramt *= servingsInput.value;
+                    myApp.butteramt *= servingsInput.value;
+                    myApp.eggamt *= servingsInput.value;
+                    myApp.saltamt *= servingsInput.value;
+                    myApp.bakingsodaamt *= servingsInput.value;
+                    myApp.vanillaamt *= servingsInput.value;
+                    myApp.flouramt *= servingsInput.value;
+                    myApp.chocolatechipsamt *= servingsInput.value;
+                }
             };
-            
+
             let myApp = Vue.createApp({
                 data() {
                     return {
@@ -120,15 +125,14 @@
 
             function ResetAmts() {
                 myApp.brownsugaramt = 1;
-                myApp.butteramt = 1/4;
+                myApp.butteramt = 1 / 4;
                 myApp.eggamt = 2;
-                myApp.saltamt = 1/2;
-                myApp.bakingsodaamt = 1/2;
-                myApp.vanillaamt = 1/2;
+                myApp.saltamt = 1 / 2;
+                myApp.bakingsodaamt = 1 / 2;
+                myApp.vanillaamt = 1 / 2;
                 myApp.flouramt = 4;
-                myApp.chocolatechipsamt = 1; 
+                myApp.chocolatechipsamt = 1;
             }
-
         </script>
     </main>
 
@@ -138,6 +142,4 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
     <script type="text/javascript" src="Fscript.js"></script>
 </body>
-
-
 </html>
