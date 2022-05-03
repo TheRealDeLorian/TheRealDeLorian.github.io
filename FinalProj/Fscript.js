@@ -1,5 +1,5 @@
 let servings = 1;
-button = document.querySelector("button");
+calculatebutton = document.querySelector("#calculatebutton");
 servingsInput = document.querySelector(".servings");
 
 document.getElementById("calculatebutton").addEventListener("click", ChangeServings);
@@ -45,3 +45,50 @@ function ResetAmts() {
     myApp.flouramt = 4;
     myApp.chocolatechipsamt = 1;
 }
+
+//API Calling
+let url = "http://www.boredapi.com/api/activity/";
+document.querySelector("#newapi").addEventListener('click', somethingunique);
+function somethingunique() {
+    fetch(url)
+    .then(response => response.json());
+    // .then(data => console.log(data));
+}
+    
+    let activitydesc = somethingunique()/*the missing string*/;
+    let activityVue = Vue.createApp({
+        data() {
+            return {
+                activity: activitydesc,
+            }
+        }
+    }).mount('#insertactivityhere')
+
+// (function() {
+//     var httpRequest;
+
+//     document.querySelector("#newapi").addEventListener('click', makeRequest);
+
+//     function makeRequest() {
+//         httpRequest = new XMLHttpRequest();
+
+//         if (!httpRequest) {
+//             alert('could not make XMLHTTP instance');
+//             return false;
+//         }
+//         httpRequest.openreadystatechange = alertContents;
+//         httpRequest.open('GET', 'http://www.boredapi.com/api/activity/');
+//         httpRequest.send();
+//     }
+
+//     function alertContents() {
+//         if (httpRequest.readyState === XMLHttpRequest.DONE) {
+//             if (httpRequest.status === 200) {
+//                 alert(httpRequest.responseText);
+//             } else {
+//                 alert('There was a problem with the request.');
+//             }
+//         }
+//     }
+// })();
+
