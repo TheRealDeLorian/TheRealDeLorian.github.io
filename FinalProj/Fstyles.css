@@ -10,6 +10,14 @@ img {
     padding: 5%
 }
 
+h3.grid-item1 {
+    font-size: large;
+}
+
+#title {
+    font-size: auto;
+}
+
 @media screen and (min-width: 650px) {
     body {
         font-family: fantasy;
@@ -19,19 +27,35 @@ img {
         text-align: center;
     }
 
+    #cookies,
+    #title {
+        font-size: xx-large;
+    }
+
     table {
         margin-left: auto;
         margin-right: auto;
     }
 
     #ingredientsanddirections {
-        margin-left: 25%;
+        margin-left: auto;
         margin-right: auto;
     }
 
+    img {
+        max-width: 70%;
+        padding: 5%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h3.grid-item1 {
+        font-size: x-large;
+    }
 }
 
-/* @media screen and (min-width: 1361px) { */
+@media screen and (min-width: 1000px) {
+
     main {
         padding: 40px;
     }
@@ -42,10 +66,14 @@ img {
     }
 
     img {
-        max-width: 40%;
+        padding: 20px;
+        width: 30%;
+        max-width: 475px;
         float: right;
         padding-right: 50px;
         padding-left: 50px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     body {
@@ -54,40 +82,50 @@ img {
     }
 
     #ingredientsanddirections {
-        padding-top: 100px;
-        margin-left: 15%
+        padding-top: 10px;
+        margin-left: 15px;
+        min-width: auto;
     }
 
     header {
         max-height: 5%;
     }
 
-    .gridcontainer {
-        margin: 1%;
-        display: grid;
-        grid-template-areas: "ingredients table"
-                             "servings    table"
-                             ".           table"
-                             "directions  directions";
-        row-gap: 1px;
-        align-items: center;
-        justify-content: center;
-      }
-      .grid-item1 {
-          margin: 0px;
-        grid-area: ingredients;
-        font-size:xxx-large;
-      }
-      .grid-item2 {
-          grid-area: servings;
-      }
-      .grid-item3 {
-        grid-area: table;
-      }
-      #directionsonly {
-          grid-area: directions;
-      }
-/* } */
+    #ingredientsTable {
+        margin-right: 35px;
+    }
+}
+
+.gridcontainer {
+    margin: 1%;
+    display: grid;
+    grid-template-areas: "ingredients table"
+        "servings    table"
+        ".           table"
+        "directions  directions";
+    row-gap: 1px;
+    align-items: center;
+    justify-content: center;
+}
+
+h3.grid-item1 {
+    margin: 0px;
+    grid-area: ingredients;
+    font-size: xx-large;
+    padding-right: 30px;
+}
+
+.grid-item2 {
+    grid-area: servings;
+}
+
+.grid-item3 {
+    grid-area: table;
+}
+
+#directionsonly {
+    grid-area: directions;
+}
 
 
 header {
