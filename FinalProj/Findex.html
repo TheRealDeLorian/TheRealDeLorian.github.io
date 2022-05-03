@@ -15,9 +15,8 @@
     <script src="https://unpkg.com/vue@3"></script>
 
     <header>
-        <h2>Best Cookies Ever! <h6>(.com)</h6>
+        <h2 id="cookies">Best Cookies Ever! <h6>(.com)</h6>
         </h2>
-
     </header>
 
     <main>
@@ -26,8 +25,8 @@
         <div id="ingredientsanddirections" class="gridcontainer">
             <h3 class="grid-item1">Ingredients -></h3>
             <div class="grid-item2">
-                <caption>Servings: <input type="text" v-model="input" size="1px" /></caption>
-                <button>Calculate servings!</button>
+                <caption>Servings: <input class="servings" type="text" v-model="input" size="1px" /></caption>
+                <button id="calculatebutton">Calculate servings!</button>
             </div>
             <table id="ingredientsTable" class="grid-item3">
                 <thead>
@@ -88,9 +87,23 @@
 
         <script> //use api that has cookies pictures
             let servings = 1;
-            //document.addEventListener() //the box number
-            //servings =
-            Vue.createApp({
+            button = document.querySelector("button");
+            servingsInput = document.querySelector(".servings");
+
+            document.getElementById("calculatebutton").addEventListener("click", ChangeServings);
+            function ChangeServings() {
+                ResetAmts();
+                myApp.brownsugaramt *= servingsInput.value;
+                myApp.butteramt *= servingsInput.value;
+                myApp.eggamt *= servingsInput.value;
+                myApp.saltamt *= servingsInput.value;
+                myApp.bakingsodaamt *= servingsInput.value;
+                myApp.vanillaamt *= servingsInput.value;
+                myApp.flouramt *= servingsInput.value;
+                myApp.chocolatechipsamt *= servingsInput.value;
+            };
+            
+            let myApp = Vue.createApp({
                 data() {
                     return {
                         brownsugaramt: 1 * servings,
@@ -104,6 +117,17 @@
                     }
                 }
             }).mount('#ingredientsTable')
+
+            function ResetAmts() {
+                myApp.brownsugaramt = 1;
+                myApp.butteramt = 1/4;
+                myApp.eggamt = 2;
+                myApp.saltamt = 1/2;
+                myApp.bakingsodaamt = 1/2;
+                myApp.vanillaamt = 1/2;
+                myApp.flouramt = 4;
+                myApp.chocolatechipsamt = 1; 
+            }
 
         </script>
     </main>
