@@ -48,22 +48,34 @@ function ResetAmts() {
 
 //API Calling
 let url = "http://www.boredapi.com/api/activity/";
-document.querySelector("#newapi").addEventListener('click', somethingunique);
-function somethingunique() {
+document.querySelector("#newapi").addEventListener('click', fetchdata());
+function fetchdata() {
     fetch(url)
-    .then(response => response.json());
-    // .then(data => console.log(data));
+    .then(response => response.json())
+    .then(data => console.log(data));
 }
-    
-    let activitydesc = somethingunique()/*the missing string*/;
-    let activityVue = Vue.createApp({
-        data() {
-            return {
-                activity: activitydesc,
-            }
-        }
-    }).mount('#insertactivityhere')
+        
+        // let activitydesc = fetchdata() // the missing string
+        // let activityVue = Vue.createApp({
+        //     data() {
+        //         return {
+        //             activity: activitydesc,
+        //         }
+        //     }
+        // }).mount('#insertactivityhere')
+        
 
+
+
+
+
+
+
+
+
+
+
+        
 // (function() {
 //     var httpRequest;
 
