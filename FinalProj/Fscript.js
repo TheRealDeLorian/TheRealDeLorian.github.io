@@ -1,8 +1,8 @@
 let servings = 1;
-calculatebutton = document.querySelector("#calculatebutton");
-servingsInput = document.querySelector(".servings");
+calculatebutton = document.querySelector("#calculatebutton"); /*REQUIREMENT 9 queryselector 1*/
+servingsInput = document.querySelector(".servings"); /*REQUIREMENT 9 queryselector 2*/
 
-document.getElementById("calculatebutton").addEventListener("click", ChangeServings);
+document.getElementById("calculatebutton").addEventListener("click", ChangeServings); /*REQUIREMENT 8 eventlistener 1*/
 function ChangeServings() {
     if (servingsInput.value == 0 || servingsInput.value == "") {
         ResetAmts();
@@ -48,9 +48,9 @@ function ResetAmts() {
 
 //API Calling
 let url = "http://www.boredapi.com/api/activity/";
-document.querySelector("#newapi").addEventListener('click', fetchdata);
-function fetchdata() {
-    fetch(url)
+document.querySelector("#newapi").addEventListener('click', fetchdata); /*REQUIREMENT 8 eventlistener 2*/
+function fetchdata() { 
+    fetch(url) /*REQUIREMENT 10 lines 53-57 interact with an API*/
         .then(response => response.json())
         .then(data => {
             document.querySelector('#insertactivityhere').innerText = data.activity;
@@ -71,44 +71,4 @@ let activityVue = Vue.createApp({
         }
     }
 }).mount('#insertactivityhere')
-
-
-
-
-
-
-
-
-
-
-
-
-
-// (function() {
-//     var httpRequest;
-
-//     document.querySelector("#newapi").addEventListener('click', makeRequest);
-
-//     function makeRequest() {
-//         httpRequest = new XMLHttpRequest();
-
-//         if (!httpRequest) {
-//             alert('could not make XMLHTTP instance');
-//             return false;
-//         }
-//         httpRequest.openreadystatechange = alertContents;
-//         httpRequest.open('GET', 'http://www.boredapi.com/api/activity/');
-//         httpRequest.send();
-//     }
-
-//     function alertContents() {
-//         if (httpRequest.readyState === XMLHttpRequest.DONE) {
-//             if (httpRequest.status === 200) {
-//                 alert(httpRequest.responseText);
-//             } else {
-//                 alert('There was a problem with the request.');
-//             }
-//         }
-//     }
-// })();
 
