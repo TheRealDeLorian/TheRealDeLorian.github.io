@@ -59,7 +59,7 @@ function fetchdata() {
 }
 
 let activitydesc = fetchdata()
-let activityVue = Vue.createApp({
+let activityVue = Vue.createApp({ /*EXTRA CREDIT 4 - lines 62-73 use vue*/
     data() {
         return {
             activity: activitydesc,
