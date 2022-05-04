@@ -47,7 +47,7 @@ function ResetAmts() {
 }
 
 //API Calling
-let url = "http://www.boredapi.com/api/activity/";
+let url = "https://www.boredapi.com/api/activity/";
 document.querySelector("#newapi").addEventListener('click', fetchdata); /*REQUIREMENT 8 eventlistener 2*/
 function fetchdata() { 
     fetch(url) /*REQUIREMENT 10 lines 53-57 interact with an API*/
