@@ -1,13 +1,16 @@
+
+
 header {
     text-align: center;
-    color:blue;
+    color:white;
 }
 body {
-    background-image: url("sea-edge-79ab30e2.png");
+    background-image: url("Background.jpg");
     background-size: 100%;
     font-size: xx-large;
     font-family: fantasy;
-    padding-left: 35%;
+    padding-up: 10%;
+    padding-left: 20%;
     padding-right: 35%;
 }
 main {
