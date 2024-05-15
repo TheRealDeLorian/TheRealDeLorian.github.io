@@ -1,0 +1,62 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#riddle {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#answer {
+  width: 50%;
+  padding: 10px;
+  font-size: 18px;
+}
+
+#submit {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#submit:hover {
+  background-color: #3e8e41;
+}
+
+#next {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#next:hover {
+  background-color: #3e8e41;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.ferret-container {
+  display: inline-block;
+  margin: 10px;
+}
+
+.ferret {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.timer {
+  font-size: 16px;
+}
