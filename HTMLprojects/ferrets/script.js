@@ -5,6 +5,18 @@ getRiddle();
 document.getElementById('submit').addEventListener('click', checkAnswer);
 document.getElementById('next').addEventListener('click', getRiddle);
 
+document.getElementById('ferrets').addEventListener('click', (event) => {
+    if (event.target.tagName === 'IMG') {
+        for (let i = 0; i < ferrets.length; i++) {
+            if (ferrets[i].image === event.target) {
+                ferrets[i].lastClickTime = Date.now();
+                ferrets[i].timerElement.textContent = 'Time left: 30 seconds'; // Update timer text instantly
+                break;
+            }
+        }
+    }
+});
+
 function getRiddle() {
     fetch('https://riddles-api.vercel.app/random')
         .then(response => response.json())
@@ -26,7 +38,7 @@ function checkAnswer() {
 
     if (userAnswer === correctAnswer) {
         document.getElementById('result').textContent = 'Correct!';
-        addFerret();
+        addFerret(); // Add ferret instantly
     } else {
         document.getElementById('result').textContent = `Sorry, the correct answer was "${currentAnswer}".`;
     }
@@ -45,6 +57,7 @@ function addFerret() {
 
     const timerElement = document.createElement('div');
     timerElement.className = 'timer';
+    timerElement.textContent = 'Time left: 30 seconds'; // Add initial timer text
     ferretContainer.appendChild(timerElement);
 
     document.getElementById('ferrets').appendChild(ferretContainer);
