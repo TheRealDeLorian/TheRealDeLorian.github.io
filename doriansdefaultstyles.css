@@ -9,6 +9,10 @@
     filter: brightness(0.5) blur(2px);
 }
 
+.no-underline-link {
+    text-decoration: none;
+}
+
 body {
     background: transparent;
     font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
@@ -45,11 +49,24 @@ h5 {
     border-radius: 1rem;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
     background: rgba(30, 30, 40, 0.95);
+    transition: all 200ms ;
+}
+
+.card--link:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    border: 30px !important;
+    border-color: solid red;
 }
 
 .card-title {
     font-weight: 600;
     color: #0d6efd;
+}
+
+.card-title.card-title--link:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .card-text,
