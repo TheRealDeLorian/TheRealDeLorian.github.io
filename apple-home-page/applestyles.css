@@ -1,5 +1,75 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(90deg, rgb(33, 33, 33) 0%, rgb(0, 0, 0) 100%);
+  color: #bbbbbb;
+  font-family: 'Open Sans', 'sans-serif';
+}
+
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin: auto;
+  max-width: 1200px;
+
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7rem;
+}
+
+.header__title {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
 .header__title-logo {
   width: 25px;
   height: 30px;
 
 }
+
+.header__title-text {
+  margin-left: 0.5rem;
+  font-size: 1.4rem; 
+  padding-top: 0.25rem;
+  font-weight: 100;
+}
+
+.header__links {
+  display: flex;
+  gap: 2rem;
+  padding-top: 0.25rem;
+}
+
+.header__link {
+  margin: 5px;
+  text-decoration: none;
+  color: #bbbbbb;
+}
+
+.header__link:hover { 
+  color:#6d6d6d;
+}
+
+.header__right {
+  display: flex;
+  color: white;
+  position: absolute;
+  font-size: 1.25rem;
+  gap: 1rem;
+  right: 2rem;
+  align-items: center;
+  padding-top: 0.5rem;
+}
+
