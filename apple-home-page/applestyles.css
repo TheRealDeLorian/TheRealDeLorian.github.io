@@ -9,7 +9,6 @@ html {
 }
 
 
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -17,11 +16,9 @@ html {
   padding: 1rem;
   margin: auto;
   max-width: 1200px;
-
 }
 
 .header__left {
-  
   display: flex;
   align-items: center;
   flex-wrap: wrap;
