@@ -1,17 +1,27 @@
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apple - Macbook Pro</title>
-  <link rel="stylesheet" href="./applestyles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apple - Macbook Pro</title>
+    <link rel="stylesheet" href="./applestyles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header class="header">
       <section class="header__left">
         <section class="header__title">
-          <img class="header__title-logo" src="Apple_logo_grey.png" alt="Apple logo">
+          <img
+            class="header__title-logo"
+            src="Apple_logo_grey.png"
+            alt="Apple logo"
+          />
           <p class="header__title-text">Apple</p>
         </section>
         <nav class="header__links">
@@ -24,47 +34,82 @@
       </section>
       <section class="header__right">
         <i class="fa-solid fa-magnifying-glass"></i>
-        <i class="fa-solid fa-cart-shopping"></i>
+        <div class="cart-icon-wrapper">
+          <a href="#basketDropdown" class="cart-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-count">1</span>
+          </a>
+          <div class="basket-dropdown" id="basketDropdown">
+            <div class="basket-content">
+              <a href="#" class="close">&times;</a>
+              <h2 class="basket-title">In Your Basket</h2>
+              <div class="basket-item">
+                <img src="./mbp.png" alt="Macbook Pro 2024" />
+                <div class="basket-item-details">
+                  <h3>Macbook Pro 2024</h3>
+                  <p>Price: $1999</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </header>
-    
+
     <main class="main">
-      <section class="hero">
+      <section class="hero fade-in"> 
+        <section class="hero__image">
+           <img src="./mbp.png" alt="Macbook Pro 2024">
+        </section>
         <section class="hero__text">
           <h1 class="hero__title">Macbook Pro 2024</h1>
           <h2 class="hero__subtitle">Supercharged for pros.</h2>
-          <p class="hero_description">The most powerful MacBook Pro ever is here. With the blazing-fast M3 Pro or M3 Max chip — the first Apple silicon designed for pros — you get groundbreaking performance and amazing battery life. Add to that a stunning Liquid Retina XDR display, the best camera and audio ever in a Mac notebook, and all the ports you need. The first notebook of its kind, this MacBook Pro is a beast.</p>
+          <p class="hero_description">
+            The most powerful MacBook Pro ever is here. With the blazing-fast M3
+            Pro or M3 Max chip — the first Apple silicon designed for pros — you
+            get groundbreaking performance and amazing battery life. Add to that
+            a stunning Liquid Retina XDR display, the best camera and audio ever
+            in a Mac notebook, and all the ports you need. The first notebook of
+            its kind, this MacBook Pro is a beast.
+          </p>
           <p class="hero__price">From $1999</p>
           <div class="hero__buttons">
             <a href="#order" class="hero__button">Order Now</a>
-            <a href="#" class="hero__playbutton"><i class="fa-solid fa-play"></i></a>
+            <a href="#videoModal" class="hero__playbutton"
+              ><i class="fa-solid fa-play"></i
+            ></a>
           </div>
         </section>
       </section>
 
-      <!--Article tag is used for cards-->
-      <section class="specs">
-        <article class="spec-section">
-          <header class="spec-section__headline">3.7x</header>
-          <p class="spec-section__description">faster CPU performance</p>
-        </article>
+      <section class="specs fade-in">
+        <div class="spec">
+          <h3 class="spec__headline">3.7x</h3>
+          <p class="spec__description">faster CPU performance</p>
+        </div>
 
-        <div class="spec-section">
-          <h3 class="spec-section__headline">13x</h3>
-          <p class="spec-section__description">faster graphics performance</p>
+        <div class="spec">
+          <h3 class="spec__headline">13x</h3>
+          <p class="spec__description">faster graphics performance</p>
         </div>
-        <div class="spec-section">
-          <h3 class="spec-section__headline">11x</h3>
-          <p class="spec-section__description">faster machine learning</p>
+        <div class="spec">
+          <h3 class="spec__headline">11x</h3>
+          <p class="spec__description">faster machine learning</p>
         </div>
-        <div class="spec-section">
-          <h3 class="spec-section__headline">21</h3>
-          <p class="spec-section__description">hours battery life</p>
+        <div class="spec">
+          <h3 class="spec__headline">21</h3>
+          <p class="spec__description">hours battery life</p>
+        </div>
+      </section>
+
+      <section id="videoModal" class="modal">
+        <div class="modal-content">
+          <a href="#" class="close">&times;</a>
+          <iframe src="" frameborder="0"></iframe>
         </div>
       </section>
     </main>
-    
-    
+
     <footer>
       <section class="footer__top">
         <div class="footer__breadcrumbs">
@@ -186,8 +231,10 @@
           </ul>
         </div>
       </section>
-      <section class="footer__legal">
+      <section class="footer__retail"> 
         <span><a href="#">Find a retailer</a> near you.</span>
+      </section>
+      <section class="footer__legal">
         <span>Copyright © 2024 Apple Inc. All rights reserved.</span>
         <a href="#">Privacy Policy</a>
         <a href="#">Legal</a>
@@ -196,4 +243,4 @@
       </section>
     </footer>
   </body>
-  </html>
+</html>
