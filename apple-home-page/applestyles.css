@@ -475,7 +475,14 @@ html {
 
 
 .footer {
+  background-color: rgba(0,0,0,0.1);
+  padding: 2rem 1rem;
+}
 
+.footer__container {
+  max-width: 1200px;
+  margin: auto;
+  
 }
 
 .footer__top {
@@ -494,26 +501,40 @@ html {
 .footer__links {
   display: flex;
   flex-wrap: wrap;
-  justify-content:center;
-  gap: 1rem;
+  justify-content:space-between;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding-bottom: 1rem;
   margin-bottom: 1rem;
 }
 
-.footer__col {
+.footer__col ul {
+
 }
 
-a {
+.footer__col li {
+  font-size: 0.875rem;
+  margin-bottom: 0.875rem;
+}
+
+.footer a {
   color: #bbbbbb;
   text-decoration: none;
 }
-a:hover {
+.footer a:hover {
   color: #bbbbbb;
   text-decoration:underline;
 }
 
-ul {
+.footer ul {
   list-style: none;
   padding: 0;
+}
+
+.footer__bottom {
+  padding-top: 1rem;
+}
+
+.footer__legal {
+  display: flex;
+  gap: 1rem;
 }
