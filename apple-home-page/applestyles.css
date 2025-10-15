@@ -484,23 +484,36 @@ html {
   margin-bottom: 1rem;
 }
 
+.footer__breadcrumbs {
+  display: flex;
+  flex-wrap: wrap; 
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .footer__links {
   display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .footer__col {
 }
 
-.footer__col a {
+a {
   color: #bbbbbb;
   text-decoration: none;
 }
-.footer__col a:hover {
+a:hover {
   color: #bbbbbb;
   text-decoration:underline;
 }
 
-.footer__col ul {
+ul {
   list-style: none;
   padding: 0;
 }
