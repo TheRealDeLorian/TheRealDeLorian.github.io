@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+html {
+  overflow-x: hidden;
+}
+
 body,
 html {
   padding: 0;
@@ -185,7 +191,7 @@ html {
   font-weight: 400;
 }
 
-.font__subtitle {
+.hero__subtitle {
   font-size: 3rem;
   font-weight: 600;
   margin-top: 0.5rem;
@@ -274,6 +280,7 @@ html {
     height: auto;
     right: -600px;
     width: 1400px;
+    overflow: hidden;
   }
 }
 
@@ -321,6 +328,11 @@ html {
   font-size: 2.25rem;
   font-weight: 400;
   margin-bottom: 0;
+}
+
+.spec__description {
+  font-size: 1.75rem;
+  font-weight: 200;
 }
 
 .modal {
@@ -477,6 +489,8 @@ html {
 .footer {
   background-color: rgba(0,0,0,0.1);
   padding: 2rem 1rem;
+  font-size: 0.875rem;
+
 }
 
 .footer__container {
@@ -504,11 +518,15 @@ html {
   justify-content:space-between;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding-bottom: 1rem;
-  margin-bottom: 1rem;
 }
 
-.footer__col ul {
+.footer__col {
+  min-width: 150px;
+  flex: 1;
+}
 
+.footer__col h4 {
+  font-size: 1rem;
 }
 
 .footer__col li {
@@ -531,10 +549,17 @@ html {
 }
 
 .footer__bottom {
-  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(20px);
+}
+
+.footer__retail {
+margin-right: 50px;
 }
 
 .footer__legal {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
