@@ -22,14 +22,16 @@ html {
 .header__left {
 }
 
-@media screen and (max-width: 450px) {
-  .header__left {
-  }
-}
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 620px) {
   .header__left {
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    gap: 2rem;
+    margin-left: 2rem;
   }
+ 
 }
 
 @media screen and (min-width: 1200px) {
@@ -57,9 +59,8 @@ html {
 
 .header__links {
   display: flex;
-  gap: 1rem;
+  justify-content: space-around;
   padding-top: 0.25rem;
-  justify-content: center;
 }
 
 .header__link {
@@ -67,6 +68,12 @@ html {
   font-weight: 400;
   text-decoration: none;
   color: #bbbbbb;
+}
+
+@media screen and (min-width: 620px) {
+  .header__links {
+     gap: 2rem;
+   }
 }
 
 .header__link:hover {
@@ -100,11 +107,7 @@ html {
   gap: 1rem;
 }
 
-@media screen and (min-width: 1200px) {
-  .header__right {
-    position: initial;
-  }
-}
+
 
 .header__right i {
   color: white;
