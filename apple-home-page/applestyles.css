@@ -20,12 +20,9 @@ html {
 }
 
 .header__left {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;  
 }
 
-@media screen and (min-width: 460px) {
+@media screen and (max-width: 450px) {
   .header__left {
   }
 }
@@ -43,6 +40,7 @@ html {
 .header__title {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .header__title-logo {
@@ -61,6 +59,7 @@ html {
   display: flex;
   gap: 1rem;
   padding-top: 0.25rem;
+  justify-content: center;
 }
 
 .header__link {
