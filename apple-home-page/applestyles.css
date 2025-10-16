@@ -16,51 +16,38 @@ html {
 
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  margin: auto;
-  max-width: 1200px;
+
 }
 
 .header__left {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;  
 }
 
 @media screen and (min-width: 460px) {
   .header__left {
-    padding-right: 5rem;
   }
 }
 
 @media screen and (min-width: 600px) {
   .header__left {
-    padding-right: 7rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .header__left {
-    gap: 7rem;
-    justify-content: start;
-    padding-right: 10rem;
   }
 }
 
 .header__title {
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
 .header__title-logo {
   width: 25px;
   height: 30px;
-
 }
 
 .header__title-text {
@@ -107,8 +94,9 @@ html {
 
 .header__right {
   display: flex;
-  position: relative;
-  align-items: center;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
   padding-top: 0.5rem;
   gap: 1rem;
 }
